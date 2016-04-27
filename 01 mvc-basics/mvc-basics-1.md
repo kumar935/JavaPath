@@ -1,6 +1,6 @@
 ## MVC Basics
 
-> Useful [Video](https://www.youtube.com/watch?v=dTVVa2gfht8)
+> Useful [Video](https://www.youtube.com/watch?v=dTVVa2gfht8) | [article](http://www.newthinktank.com/2013/02/mvc-java-tutorial/)
 
 ####Code used in the video:
 
