@@ -1,12 +1,10 @@
 # JavaPath
 
-> My main focus was to learn Spring MVC, so this is more appropriately roadmap for learning spring mvc. Sorry if the title is misleading.
+Here I have documented all the good links that helped me whenever I got stuck while understanding a concept, or say setting up project using a certain framework or just about any silly hitch. I hope this can be helpful to others too.
 
 I already had significant experience in front-end development (Javascript) and android development (So I had some knowledge about java as a language)
 
-So this will probably be useful for those who have similar background.
-
-One can obviously still trudge through, and just troubleshoot wherever they get stuck themselves, and make use of this roadmap.
+So I may have skipped some concepts that were already obvious to me. One can obviously still trudge through, and just troubleshoot wherever they get stuck themselves, and make use of this roadmap.
 
 ## CONTENTS
 
