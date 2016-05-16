@@ -14,7 +14,19 @@
         - Now, transferring web.xml's work:
             - `<display-name>`: add application.properties in the resources directory [properties list](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
             - `<context-param>`: easy peasy, check this [link](http://stackoverflow.com/a/26648258/3248247)
-            - `<listener>`:
+            - `<listener>` [StackOverflow source](http://stackoverflow.com/a/28566481/3248247):
+                - for ContextLoaderListener (similar for other listeners):
+                    ```java
+                    @Bean
+                    @ConditionalOnMissingBean(ContextLoaderListener.class)
+                    public ContextLoaderListener requestContextListener() {
+                        return new ContextLoaderListener();
+                    }
+                    ```
+            - `<filter>`: Stackoverflow: [1](http://stackoverflow.com/a/30658752/3248247), [2](http://stackoverflow.com/a/19830906/3248247), example: [3](http://stackoverflow.com/a/28214811/3248247)
+            - `<servlet>`: [StackOverflow link](http://stackoverflow.com/a/22408998/3248247)
+            - `<session-config>` stuff in application.properties: [appendix](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+
 
 
 
