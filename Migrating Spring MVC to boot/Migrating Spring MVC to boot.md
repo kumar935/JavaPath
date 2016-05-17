@@ -26,6 +26,7 @@
             - `<filter>`: Stackoverflow: [1](http://stackoverflow.com/a/30658752/3248247), [2](http://stackoverflow.com/a/19830906/3248247), example: [3](http://stackoverflow.com/a/28214811/3248247)
             - `<servlet>`: [StackOverflow link](http://stackoverflow.com/a/22408998/3248247)
             - `<session-config>` stuff in application.properties: [appendix](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+            - Can get error regarding conflicts in implementations of logging library, see [here](http://stackoverflow.com/questions/23984009/disable-logback-in-springboot), in my case I just had the sequence of dependencies wrong. The spring boot dependency should be at the top.
 
 
 
