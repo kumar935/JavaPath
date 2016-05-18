@@ -27,6 +27,8 @@
             - `<servlet>`: [StackOverflow link](http://stackoverflow.com/a/22408998/3248247)
             - `<session-config>` stuff in application.properties: [appendix](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
             - Can get error regarding conflicts in implementations of logging library, see [here](http://stackoverflow.com/questions/23984009/disable-logback-in-springboot), in my case I just had the sequence of dependencies wrong. The spring boot dependency should be at the top.
+        - Okay lots of errors. Guess I need to include `@EnableAutoConfiguration` annotation. What does it do? [link](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html#getting-started-first-application-auto-configuration)
+        
 
 
 
