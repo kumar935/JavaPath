@@ -1,4 +1,4 @@
-## Migrating Spring MVC to boot
+## Migrating Spring MVC to boot: Top to bottom approach
 
 - Started [here](http://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html#howto-convert-an-existing-application-to-spring-boot), and [StackOverflow link](http://stackoverflow.com/questions/31409231/migrate-existing-spring-app-to-spring-boot-manually-configure-spring-boot)
     - ApplicationContext: [spring doc](https://spring.io/understanding/application-context)
@@ -28,6 +28,7 @@
             - `<session-config>` stuff in application.properties: [appendix](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
             - Can get error regarding conflicts in implementations of logging library, see [here](http://stackoverflow.com/questions/23984009/disable-logback-in-springboot), in my case I just had the sequence of dependencies wrong. The spring boot dependency should be at the top.
         - Okay lots of errors. Guess I need to include `@EnableAutoConfiguration` annotation. What does it do? [link](http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html#getting-started-first-application-auto-configuration)
+        - Dead end. Too many variables. Gonna try bottom to top approach, meaning will make a working basic spring boot application, then slowly migrate everything to it.
         
 
 
