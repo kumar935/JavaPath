@@ -15,4 +15,23 @@
   - [BeanPostProcessor](http://www.tutorialspoint.com/spring/spring_bean_post_processors.htm): Sequence of stuff: postProcessBeforeInitialization > init-method > postProcessAfterInitialization > method call inside main() > destroy-method
   - Two types of [DI](http://www.tutorialspoint.com/spring/spring_dependency_injection.htm): through constructor and through a setter method, former being recommended on tutorialspoint. Check this p-namespace too, same link.
   - Similar to setter DI, there is [bean injection](http://www.tutorialspoint.com/spring/spring_injecting_inner_beans.htm), you directly assign a bean to the concerned property. 
-  - [Autowiring](http://www.tutorialspoint.com/spring/spring_beans_autowiring.htm) : [by propertyName](http://www.tutorialspoint.com/spring/spring_autowiring_byname.htm) (assign property's ref to the bean named same as the propertyName)
+  - [Autowiring](http://www.tutorialspoint.com/spring/spring_beans_autowiring.htm) : [byName^](http://www.tutorialspoint.com/spring/spring_autowiring_byname.htm "assign property's ref to the bean named same as the propertyName"), [byType^](http://www.tutorialspoint.com/spring/spring_autowiring_bytype.htm "similar to byName, but does matching according to class type"), [byContructor^](http://www.tutorialspoint.com/spring/spring_autowiring_byconstructor.htm "pretty much same as byType, only instead of properties, it is constructor arguments"), and autodetect which first checks byConstructor, which if doesn't work, then byType
+  - Using [@Autowired annotation](http://www.tutorialspoint.com/spring/spring_autowired_annotation.htm) on the setter method or the instance of dependency we want to use (which presents itself as a property in the class): basically the same as the byType described above, only we don't have to give the attribute `autowire="byType"` on the bean.
+  - [JSR-250 annotations](http://www.tutorialspoint.com/spring/spring_jsr250_annotations.htm) @PostConstruct == init-method attribute & @PreDestroy == destroy-method attribute for the bean. @Resource annotation seems similar to @Autowired, except it takes a 'name' parameter accepting the name of implementation to autowire to. I'm not sure though about @Resource.
+  - [Java based configuration](http://www.tutorialspoint.com/spring/spring_java_based_configuration.htm):
+    ```java
+    @Configuration
+    public class HelloWorldConfig {
+    
+       @Bean 
+       public HelloWorld helloWorld(){
+          return new HelloWorld();
+       }
+    }
+    ```
+    is equivalent to
+    ```xml
+    <beans>
+      <bean id="helloWorld" class="com.tutorialspoint.HelloWorld" />
+    </beans>
+    ```
