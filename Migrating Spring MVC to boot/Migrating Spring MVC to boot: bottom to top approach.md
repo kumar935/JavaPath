@@ -35,3 +35,10 @@
       <bean id="helloWorld" class="com.tutorialspoint.HelloWorld" />
     </beans>
     ```
+    huh. I didn't register the java based beans in the main method as they showed in the tutorial. Maybe that was causing the problem.
+      - can use one bean in another just like normal methods
+      - will notice `ctx.getBean(abc.class)` instead of `ctx.getBean('abc')` in the examples, that's because when we define beans using annotations, we don't specify `name` as we used to in xml configs.
+      - can `@Import` bean definitions, specify `@Bean(initMethod="init", destroyMethod="destroy")` and `@Scope("prototype")`
+  - [Events](http://www.tutorialspoint.com/spring/event_handling_in_spring.htm), and [custom events](http://www.tutorialspoint.com/spring/custom_events_in_spring.htm)
+  - [AOP](http://www.tutorialspoint.com/spring/schema_based_aop_appoach.htm): Can assign methods to run before, after, after return of a method in the main application using aop, collectively or individually. [@AspectJ](http://www.tutorialspoint.com/spring/aspectj_based_aop_appoach.htm): Same stuff using annotations.
+  - [Database interactions using JDBC framework](http://www.tutorialspoint.com/spring/spring_jdbc_framework.htm), [ACID concepts in database](http://www.tutorialspoint.com/spring/spring_transaction_management.htm) (I skipped these)
