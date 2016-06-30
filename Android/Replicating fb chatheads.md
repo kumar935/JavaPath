@@ -5,3 +5,5 @@
     ```
     <service android:enabled="true" android:name=".ChatHeadService" />
     ```
+- Floating icon like fb chathead done, but how to open the whole app in a floating container? Maybe if I open the fragment inside a view that I added in the floating window: [SO link](http://stackoverflow.com/questions/5159982/how-do-i-add-a-fragment-to-an-activity-with-a-programmatically-created-content-v)
+  - When it won't let me set Id to my dynamically added frameLayout: [SO link](http://stackoverflow.com/questions/8460680/how-can-i-assign-an-id-to-a-view-programmatically), <- have to make separate resource file for ids.
