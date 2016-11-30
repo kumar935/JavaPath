@@ -1,0 +1,5 @@
+## Making HTTP requests using volley
+
+- Started [here](https://developer.android.com/training/volley/request.html). Conclusion > Basically these types of requests:
+  - [String Reqests](https://developer.android.com/training/volley/requestqueue.html) (Response will come in string). In the same article it also shows how to [Use a Singleton Pattern^](https://developer.android.com/training/volley/requestqueue.html#singleton "The recommended approach is to implement a singleton class that encapsulates RequestQueue and other Volley functionality. Another approach is to subclass Application and set up the RequestQueue in Application.onCreate(). But this approach is discouraged; a static singleton can provide the same functionality in a more modular way.A key concept is that the RequestQueue must be instantiated with the Application context, not an Activity context. This ensures that the RequestQueue will last for the lifetime of your app, instead of being recreated every time the activity is recreated (for example, when the user rotates the device).")
+  
